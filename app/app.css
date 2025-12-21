@@ -1,0 +1,173 @@
+@import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@200;300;400;500;600;700&display=swap");
+@import "tailwindcss";
+@import "tw-animate-css";
+
+@theme {
+  --font-sans: "Space Grotesk", ui-sans-serif, system-ui, sans-serif,
+    "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+
+  /* Modernized colors */
+  --color-dark-200: #1F2937;          /* dark slate gray */
+  --color-light-blue-100: #E0E7FF33;  /* soft periwinkle */
+  --color-light-blue-200: #C7D2FE66;  /* slightly stronger */
+
+  --color-badge-green: #D1FAE5;
+  --color-badge-red: #FEE2E2;
+  --color-badge-yellow: #FEF3C7;
+
+  --color-badge-green-text: #065F46;
+  --color-badge-red-text: #991B1B;
+  --color-badge-yellow-text: #78350F;
+}
+
+html,
+body {
+  @apply bg-white font-sans;
+}
+
+main {
+  @apply min-h-screen pt-10;
+}
+
+h1 {
+  @apply max-sm:text-[3rem] text-6xl text-gradient leading-tight xl:tracking-[-2px] font-semibold;
+}
+
+h2 {
+  @apply max-sm:text-xl text-3xl text-dark-200;
+}
+
+label {
+  @apply text-dark-200;
+}
+
+input,
+textarea {
+  @apply w-full p-4 inset-shadow rounded-2xl focus:outline-none bg-white;
+}
+
+form {
+  @apply flex flex-col items-start gap-8 w-full;
+}
+
+/* Sharper navbar & buttons */
+.navbar {
+  border-radius: 12px;
+}
+
+.primary-button {
+  border-radius: 12px;
+}
+
+@layer components {
+  .text-gradient {
+    @apply bg-clip-text text-transparent bg-gradient-to-r from-[#AB8C95] via-[#000000] to-[#8E97C5];
+  }
+
+  .gradient-border {
+    @apply bg-gradient-to-b from-light-blue-100 to-light-blue-200 p-4 rounded-2xl;
+  }
+
+  .primary-button {
+    @apply primary-gradient text-white px-4 py-2 cursor-pointer w-full;
+  }
+
+  .resume-nav {
+    @apply flex flex-row justify-between items-center p-4 border-b border-gray-200;
+  }
+
+  .resume-summary {
+    @apply flex flex-row items-center justify-center p-4 gap-4;
+    .category {
+      @apply flex flex-row gap-2 items-center bg-gray-50 rounded-2xl p-4 w-full justify-between;
+    }
+  }
+
+  .back-button {
+    @apply flex flex-row items-center gap-2 border border-gray-200 rounded-lg p-2 shadow-sm;
+  }
+
+  .auth-button {
+    @apply primary-gradient rounded-xl py-4 px-8 cursor-pointer w-[600px] max-md:w-full text-3xl font-semibold text-white;
+  }
+
+  .main-section {
+    @apply flex flex-col items-center gap-9 pt-12 max-sm:mx-2 mx-15 pb-5;
+  }
+
+  .page-heading {
+    @apply flex flex-col items-center gap-8 max-w-4xl text-center max-sm:gap-4;
+  }
+
+  .resumes-section {
+    @apply flex flex-wrap max-md:flex-col max-md:gap-4 gap-6 items-start max-md:items-center w-full max-w-[1850px] justify-evenly;
+  }
+
+  .resume-card {
+    @apply flex flex-col gap-8 h-[560px] w-[350px] lg:w-[430px] xl:w-[490px] bg-white rounded-2xl p-4;
+  }
+
+  .resume-card-header {
+    @apply flex flex-row gap-2 justify-between min-h-[110px] max-sm:flex-col items-center max-md:justify-center max-md:items-center;
+  }
+
+  .feedback-section {
+    @apply flex flex-col gap-8 w-1/2 px-8 max-lg:w-full py-6;
+  }
+
+  .navbar {
+    @apply flex flex-row justify-between items-center bg-white p-4 w-full px-10 max-w-[1200px] mx-auto;
+  }
+
+  .score-badge {
+    @apply flex flex-row items-center justify-center py-1 px-2 gap-4 rounded-[96px];
+  }
+
+  .form-div {
+    @apply flex flex-col gap-2 w-full items-start;
+  }
+
+  .uplader-drag-area {
+    @apply relative p-8 text-center transition-all duration-700 cursor-pointer bg-white rounded-2xl min-h-[208px];
+  }
+
+  .uploader-selected-file {
+    @apply flex items-center justify-between p-3 bg-gray-50 rounded-2xl;
+  }
+}
+
+/* Modern gradients & shadows */
+@utility bg-gradient {
+  background: linear-gradient(to bottom, #f9fafb, #e5e7eb);
+}
+
+@utility text-gradient {
+  @apply bg-clip-text text-transparent bg-gradient-to-r from-[#AB8C95] via-[#000000] to-[#8E97C5];
+}
+
+@utility gradient-hover {
+  @apply bg-gradient-to-b from-light-blue-100 to-light-blue-200;
+}
+
+@utility primary-gradient {
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  box-shadow: 0px 12px 24px rgba(0, 0, 0, 0.08);
+}
+
+@utility primary-gradient-hover {
+  background: linear-gradient(135deg, #5a67d8, #6b46c1);
+}
+
+@utility inset-shadow {
+  box-shadow: inset 0 0 12px 0 rgba(36, 99, 235, 0.2);
+  backdrop-filter: blur(10px);
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
