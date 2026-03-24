@@ -1,3 +1,5 @@
+import type { Resume } from "types/index";
+
 export const resumes: Resume[] = [
   {
     id: "1",
