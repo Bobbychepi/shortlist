@@ -1,6 +1,6 @@
 import Navbar from "~/components/navbar";
 import type { Route } from "./+types/home";
-import { resumes } from "constants";
+import { resumes } from "../../constants";
 import ResumeCard from "~/components/resumeCard";
 import type { Resume } from "types/index"; // make sure this points to your type
 

@@ -1,5 +1,4 @@
 import { usePuterStore } from 'lib/puter'
-import React from 'react'
 
 export const metadata = {
   title: 'Shortlist | Auth Page',
