@@ -24,7 +24,7 @@ export default function Home() {
             Make it to the shortlist <br/>
 
             <Typewriter
-              text={["smoother.", "faster.", "smarter.", "quicker.", "today."]}
+              text={["faster.", "smarter.", "quicker.", "today."]}
               loop
               className="text-blue-500"
               speed={80}

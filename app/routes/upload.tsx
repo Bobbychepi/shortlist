@@ -6,6 +6,14 @@ import FileUploader from "~/components/FileUploader";
 import Navbar from "~/components/navbar";
 import { convertPdfToImage } from "~/lib/pdftoimg";
 import { generateUUID } from "~/lib/utils";
+import type { Route } from "../+types/root";
+
+export function meta({}: Route.MetaArgs) {
+  return [
+    { title: "shortlist." },
+    { name: "description", content: "Analyze your resume with AI-powered insights." },
+  ];
+}
 
 type AnalyzePayload = {
   companyName: string;
