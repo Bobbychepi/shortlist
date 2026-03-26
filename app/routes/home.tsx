@@ -16,7 +16,7 @@ export function meta({}: Route.MetaArgs) {
 export default function Home() {
   return (
     <main>
-      {/*<Navbar />*/}
+      {<Navbar />}
 
       <section className="main-section">
         <div className="page-heading py-16">

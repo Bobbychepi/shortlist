@@ -14,10 +14,7 @@ interface TypewriterProps {
   pauseDuration?: number;
 }
 
-/**
- * A highly customizable typewriter effect component.
- * Supports single strings or arrays of strings with looping.
- */
+
 export function Typewriter({
   text,
   speed = 50,
