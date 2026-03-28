@@ -19,8 +19,8 @@ const Navbar = () => {
         <Link to="/" className="p-2 rounded-full hover:bg-gray-300 hover:text-black transition-all duration-300">
           Tech Stack
         </Link>
-        <Link to="/" className="p-2 rounded-full hover:bg-gray-300 hover:text-black transition-all duration-300">
-          Resume
+        <Link to="/responses" className="p-2 rounded-full hover:bg-gray-300 hover:text-black transition-all duration-300">
+          Responses
         </Link>
         <Link to="/" className="p-2 rounded-full hover:bg-gray-300 hover:text-black transition-all duration-300">
           Contact

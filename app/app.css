@@ -171,3 +171,53 @@ form {
     opacity: 1;
   }
 }
+
+@layer components {
+  .responses-wrapper {
+    @apply w-full max-w-[1600px] mx-auto px-4 md:px-8 lg:px-12 py-8 md:py-12;
+  }
+
+  .responses-header {
+    @apply flex flex-col gap-3 mb-8 md:mb-10;
+  }
+
+  .responses-subtitle {
+    @apply text-base md:text-lg text-gray-600 max-w-3xl;
+  }
+
+  .responses-state {
+    @apply text-base md:text-lg text-gray-700;
+  }
+
+  .responses-error {
+    @apply text-red-600 text-base md:text-lg;
+  }
+
+  .responses-grid {
+    @apply grid grid-cols-1 md:grid-cols-2 2xl:grid-cols-3 gap-4 md:gap-6;
+  }
+
+  .response-card {
+    @apply rounded-2xl border border-gray-200 bg-white p-4 md:p-6 flex flex-col gap-5 shadow-sm;
+  }
+
+  .response-card-header {
+    @apply flex flex-col gap-2;
+  }
+
+  .response-section {
+    @apply flex flex-col gap-2;
+  }
+
+  .response-section h3 {
+    @apply text-base md:text-lg font-semibold text-gray-900;
+  }
+
+  .response-section p {
+    @apply text-sm md:text-base text-gray-700 leading-relaxed;
+  }
+
+  .response-pre {
+    @apply w-full max-h-[420px] overflow-auto rounded-xl bg-gray-900 text-gray-100 text-xs md:text-sm p-3 md:p-4 leading-relaxed;
+  }
+}
