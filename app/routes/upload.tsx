@@ -102,7 +102,7 @@ const Upload = () => {
       await kv.set(`resume-${uuid}`, JSON.stringify(data));
 
       setStatusText("Analysis complete. Redirecting...");
-      navigate("/");
+      navigate("/responses");
     } catch (err) {
       const message = err instanceof Error ? err.message : "Unexpected upload error.";
       setSubmitError(message);
